@@ -39,3 +39,13 @@ function map<T, U>(obj: Option<T>, f: (obj: T) => U): Option<U> {
       }
   }
 }
+
+function identity<T>(value: T): T {
+  return value;
+}
+
+const value = identity(3);
+
+function add<T extends number, K extends number>(a: T, b: K) {
+  return identity(a+b)
+}
