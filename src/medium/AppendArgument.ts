@@ -1,0 +1,1 @@
+type AppendArgument<Fn extends (...args: any[]) => any, A extends unknown> = Fn extends (...args: infer ArgType) => infer ReturnType ? (...args: [...ArgType, A]) => ReturnType : never
