@@ -1,5 +1,5 @@
 type AppendToObject<T extends {}, U extends string | number | symbol, V extends any> = {
-  [K in U | keyof T]: K extends keyof T ? T[K] : V
+  [K in U | keyof T]: K extends keyof T ? T[K] : K extends U ? V : never
 }
 
 type test1 = {
